@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
-public class task5 {
+public class Task5 {
 
     static final int x = 5;
     static final int y = 3;
@@ -15,7 +15,6 @@ public class task5 {
     public static void main(String[] args) throws Exception {
         String s = readFileAsString(".\\src\\com\\company\\input.txt");
         s = s.replaceAll("\\s+", "");
-        System.out.println(s);
         char[][] arr = new char[y][x];
         for (int i = 0, ch = 0; i < y; i++) {
             if (i == arr[0].length) {
@@ -43,8 +42,8 @@ public class task5 {
 
 
     static boolean search(String key, char[][] arr) {
-        StringBuilder sb1 = new StringBuilder("");
-        StringBuilder sb2 = new StringBuilder("");
+        StringBuilder sb1 = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
         for (int r = 0; r < arr.length; r++) {
             for (int c = 0; c < arr[0].length; c++) {
                 sb1.append(arr[r][c]);
@@ -55,19 +54,11 @@ public class task5 {
                 sb2.append(arr[r][c]);
             }
         }
-        System.out.println(sb1.toString());
-        System.out.println(sb2.toString());
-        if (sb1.toString().contains(key) || sb2.toString().contains(key)) {
-            return true;
-        } else {
-            return false;
-        }
+        return sb1.toString().contains(key) || sb2.toString().contains(key);
     }
 
     public static String readFileAsString(String fileName) throws Exception {
-        String data = "";
-        data = new String(Files.readAllBytes(Paths.get(fileName)));
-        return data;
+        return new String(Files.readAllBytes(Paths.get(fileName)));
     }
 
 }

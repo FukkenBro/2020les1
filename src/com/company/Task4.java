@@ -4,7 +4,7 @@ package com.company;
 //
 //        Убрать начальные, конечные и между словами должно быть не больше 1 пробела.
 
-public class task4 {
+public class Task4 {
     public static void main(String[] args) {
         String s = "      /  /     /           / /   /             /   /      /                         /      ";
         System.out.println(format(s));

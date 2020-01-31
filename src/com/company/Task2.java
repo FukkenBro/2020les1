@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /*3) Заполнить массив из 10 элементов случайными целыми числами от 10(включительно) до 20(включительно). Вывести среднее арифметическое.*/
-public class task2 {
+public class Task2 {
 
     static final Random RANDOM = new java.util.Random();
 
@@ -16,7 +16,7 @@ public class task2 {
             sum += arr[i];
         }
         System.out.println(Arrays.toString(arr));
-        int result = sum / arr.length;
+        double result = (double) sum / arr.length;
         System.out.println("avg = " + result);
     }
 
